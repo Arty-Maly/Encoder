@@ -2,15 +2,18 @@ class MainController < ApplicationController
 	# srespond_to :js, :json, :html
   	before_filter :authorize
     
+  #render the splash page 
   	def question
   		render 'question'
   	end
-
+  #go to the encryopt page
 	def encrypt
     @msgs = User.find(session[:user_id]).message
 		render 'index'
 	end
 
+
+  #this is where the encryption happens
 	def ceaser_encrypt
 
 		@alphabet = [*'A'..'Z',*'a'..'z',*' '..'?', *"\n"].to_a.join
@@ -27,7 +30,7 @@ class MainController < ApplicationController
      	end
 	end
 
-
+#respond to ajax request and save message
   def save_message
     if request.xhr?
       params[:user_id] = session[:user_id]
@@ -47,7 +50,7 @@ class MainController < ApplicationController
     end
   end
 
-  
+  #respond to ajax request and get message
   def get_message
     @msg = Message.find_by_id(get_message_params[:message_id])
 
@@ -60,6 +63,7 @@ class MainController < ApplicationController
 
   end
 
+#private methods to verify params passed from view
   private 
   def message_params
     params.permit(:m_message, :m_offset, :user_id)
