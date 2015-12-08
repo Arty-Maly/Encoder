@@ -19,3 +19,13 @@
 	position: absolute;
 	font-size:0.8rem;
 }
+
+
+footer {
+	position: absolute;
+	font-size:0.3rem;
+	width:100%;
+	text-align: center;
+	bottom:0;
+	font-weight: lighter;
+}

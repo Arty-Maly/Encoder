@@ -1,6 +1,7 @@
 class MainController < ApplicationController
 	# srespond_to :js, :json, :html
   	before_filter :authorize
+    
   	def question
   		render 'question'
   	end
@@ -30,7 +31,8 @@ class MainController < ApplicationController
   def save_message
     if request.xhr?
       params[:user_id] = session[:user_id]
-      puts params
+      #Wanted to save the lookup time in the user table for the id since i alrdy have it cached.
+      #either way no big gain, given the size of this project but worth noting.
       @msg = Message.new(message_params)
       if @msg.save
         render :json => {
@@ -67,6 +69,8 @@ class MainController < ApplicationController
     params.permit(:message_id)
   end
 
+
+  
 
 
 end

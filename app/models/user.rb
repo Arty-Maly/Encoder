@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   validates_format_of :email, :with => EMAIL_REGEX
   
-
   
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -21,7 +20,8 @@ class User < ActiveRecord::Base
       nil
     end
   end
-  
+
+
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt

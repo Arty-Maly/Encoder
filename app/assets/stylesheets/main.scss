@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+	counter-reset: section;
 	font-family: 'Roboto', sans-serif; 
 	height: 100%;
     position: absolute;
@@ -22,7 +23,7 @@ body {
 .encrypt_path, .decrypt_path {
 	position:absolute;
 	width:50%;
-	height:40%;
+	height:3rem;
 	top:70%;
 	left:50%;
 	text-align:center;
@@ -69,7 +70,7 @@ body {
 .container {
 	position:absolute;
 	height:80%;
-	width:50%;
+	width: 8.3rem;
 	top:50%;
 	left:50%;
 	transform: translate(-50%, -50%);
@@ -126,7 +127,7 @@ input {
 .button_wrapper {
 	float:left;
 	width:8rem;
-	height:1.5rem;
+	height:1.2rem;
 }
 
 .button, .save {
@@ -222,12 +223,17 @@ input {
     border-bottom-style: solid;
     padding-left: 0.3rem;
     padding-top: 0.3rem;
+    counter-increment: section;
     width:100%;
 }
 .message_slot:hover {
 background-color:#87D37C;
 	
 }
+.message_slot:before {
+	content:counter(section) ".";
+}
+
 
 .decrypt {
 	margin-top:0;

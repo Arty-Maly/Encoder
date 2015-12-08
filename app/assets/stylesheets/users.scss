@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#new_user {
-	margin-left:2rem
-}
+
 
 #user_email, #user_password, #user_password_confirmation {
 	width:4rem;
@@ -15,20 +13,35 @@
 
 #user_email {
 
-	left: 4rem;
+	left: 1.97rem;
+
+}
+#new_user {
+	font-size:0.6rem
 }
 
 #user_password {
 	
-	left: 3rem;
+	left: 1.5rem;
 }
 .button_s {
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 	position:relative;
 	width:6rem !important;
 	height:0.8rem !important;
-	left:40%;
-	position:relative !important; 
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
+	margin-bottom:1rem;
+}
+
+ul {
+	display:none;
+}
+h2 {
+	font-size:0.5rem;
+	position:relative;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
 }
