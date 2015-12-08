@@ -1,0 +1,32 @@
+<!--<h1> Hello </h1>
+
+<%= form_tag("encrypt", method: "post") do %>
+  <%= label_tag(:text, "Enter String To Encrypt:") %>
+  <br>
+  <%= text_area_tag(:q) %>
+  <br>
+  <%= submit_tag("Encrypt") %>
+<% end %>-->
+<div class="container">
+<div class="wrapper"><span class="shift_text">Enter The Shift Amount:  </span><input type="number" class="offset" value="0"></div>
+<textarea autofocus class="text">
+</textarea>
+
+
+<div class="button_wrapper"><button class="button">Encrypt</button></div>
+<div class="button_wrapper"><button class="button decrypt">Decrypt</button></div>
+<div class="button_wrapper"><button class="save">Save Message</button></div>
+</div>
+<div class="tab_container">
+	<div class="arrow-right"> </div>
+	<div class="right_tab"> 
+	
+	<div class="header">My Saved Messages</div>
+	<% @msgs.each do |msg| %>
+		<div class="message_slot" data-msg-id="<%= msg.id %>"> Offset: <%= msg.m_offset %>, Text: <%= msg.m_message[0..7] %>...
+		</div>
+	<% end %>
+	</div>	
+
+
+</div>

@@ -1,0 +1,70 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	color:white;
+}
+h1 {
+	font-size:0.5rem;
+	text-align:center;
+	
+}
+label {
+	font-size: 0.5rem;
+}
+#user_nav {
+	right: 0;
+    color: white !important;
+    padding-right: 0.2rem;
+    text-align: right;
+    width: 100%;
+    background-color: #87D37C;
+}
+
+.center_container {
+	color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+}
+#submit{
+	width:3rem;
+}
+#submit:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+
+.text_field, #password {
+    width:3rem;
+    background-color:white !important;
+}
+
+
+#email {
+    margin-left: 0.9rem;
+}
+
+#flash_id {
+    z-index:100;
+}
+#password, #email {
+    color:black;
+}
+
+.error_messages {
+    font-size:0.8rem;
+}
+
+.field_with_errors {
+    display:inline-block;
+}
+
